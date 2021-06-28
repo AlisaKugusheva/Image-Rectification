@@ -8,7 +8,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 
-def remove(img, kernel_horizontal=(1, 30), kernel_vertical=(30, 1)):
+def remove(img, kernel_horizontal=(1, 15), kernel_vertical=(15, 1)):
 
     kernel = np.ones(kernel_horizontal)
     horizontal = cv2.morphologyEx(img, cv2.MORPH_CLOSE, kernel)
